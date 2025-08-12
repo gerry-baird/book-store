@@ -39,7 +39,8 @@ This is a FastAPI-based book store API with a simple in-memory data structure.
 - `routers/books.py` - Book-related endpoints organized in a router
 - `data/book.py` - Pydantic model defining the Book schema
 - `data/customer.py` - Pydantic model defining the Customer schema
-- `data/generate_data.py` - Sample data initialization functions for books and customers
+- `data/order.py` - Pydantic models defining the Order and OrderItem schemas
+- `data/generate_data.py` - Sample data initialization functions for books, customers, and orders
 - `pyproject.toml` - Project configuration and dependencies using uv
 
 **API Endpoints:**
@@ -53,6 +54,8 @@ This is a FastAPI-based book store API with a simple in-memory data structure.
 - Uses Pydantic models for data validation and serialization
 - Book model includes id, title, author, description, price, and condition fields
 - Customer model includes id, name, email, phone, address, country, date_joined, is_active, and loyalty_points fields
+- Order model includes id, customer_id, order_date, status, items, pricing details, and shipping information
+- OrderItem model includes id, book_id, quantity, unit_price, and total_price
 - Data is stored in memory as lists initialized at startup from `data/generate_data.py`
 - No persistent database - data resets on server restart
 
