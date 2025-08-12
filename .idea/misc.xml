@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="uv (book-store-3)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="uv (book-store)" project-jdk-type="Python SDK" />
 </project>
