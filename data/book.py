@@ -10,3 +10,4 @@ class Book(BaseModel):
     description: Optional[str] = Field(default=None, description="Description of the book")
     price: float = Field(..., description="Price of the book")
     condition: Literal["new", "good", "fair", "poor"] = Field(default="new", description="Physical condition of the book")
+    category: str = Field(default="fiction", description="Category or genre of the book")
